@@ -33,16 +33,11 @@ public class HomeFragment extends Fragment {
         MainActivity parentActivity = (MainActivity) getActivity();
         resideMenu = parentActivity.getResideMenu();
 
-        parentView.findViewById(R.id.btn_open_menu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resideMenu.openMenu(ResideMenu.DIRECTION_LEFT);
-            }
-        });
+
 
         // add gesture operation's ignored views
-        FrameLayout ignored_view = (FrameLayout) parentView.findViewById(R.id.ignored_view);
-        resideMenu.addIgnoredView(ignored_view);
+//        FrameLayout ignored_view = (FrameLayout) parentView.findViewById(R.id.ignored_view);
+//        resideMenu.addIgnoredView(ignored_view);
     }
 
 }

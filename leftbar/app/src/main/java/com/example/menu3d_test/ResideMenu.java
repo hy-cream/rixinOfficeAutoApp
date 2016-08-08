@@ -96,11 +96,13 @@ public class ResideMenu extends FrameLayout {
 
     private void initViews(Context context, int customLeftMenuId,
                            int customRightMenuId) {
+        //取得XML的view
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.residemenu_custom, this);
 
         if (customLeftMenuId >= 0) {
+            //false可以正确处理parent最外围的宽高
             scrollViewLeftMenu = inflater.inflate(customLeftMenuId, this, false);
         } else {
             scrollViewLeftMenu = inflater.inflate(
@@ -581,7 +583,22 @@ public class ResideMenu extends FrameLayout {
     }
 
     private float lastActionDownX, lastActionDownY;
+/*
+* MotionEvent.ACTION_DOWN:
+    记录了X，Y轴的坐标点，判断是否打开，设置了按下的状态为PRESSED_DOWN
 
+    MotionEvent.ACTION_MOVE:
+    拿到当前X,Y减去DOWN下记录下来的X,Y，这样得到了移动的X,Y，
+    然后判断如果如果移动的X,Y大于25或者小于-25就改变按下状态为PRESSED_MOVE_VERTICAL
+    如果移动的X,Y大于50或者小于-50就改变状态为PRESSED_MOVE_HORIZANTAL
+
+    状态为PRESSED_MOVE_HORIZANTAL就改变菜单主视图内容以及阴影图片大小，在改变的同时还设置了当前菜单的透明度。
+    MotionEvent.ACTION_UP:
+
+    判断是否菜单是否打开状态，在获取当前缩放的X比例，
+
+    判断比例小于0.56f,则关闭菜单，反正开启菜单。
+*/
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         float currentActivityScaleX = ViewHelper.getScaleX(viewActivity);
