@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.guide.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_guidebackground_1"
+        android:background="@mipmap/guide_bg_img1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/iv_guidebackground_2"
+        android:background="@mipmap/guide_bg"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/ib_new_student"
+            android:src="@mipmap/guide_xinshengrukou"
+            android:background="#00000000"
+            android:layout_alignParentRight="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <LinearLayout
+            android:layout_below="@+id/ib_new_student"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:src="@mipmap/login_tel_correct"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_guide"
+                android:layout_gravity="center"
+                android:layout_marginTop="130dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/dots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/ib_login"
+                    android:text="登  录"
+                    android:background="@mipmap/guide_btn"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:layout_width="139dp"
+                    android:layout_height="41dp"
+                    android:layout_marginLeft="33dp"/>
+
+                <Button
+                    android:id="@+id/ib_register"
+                    android:text="注  册"
+                    android:background="@mipmap/guide_btn"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:layout_width="139dp"
+                    android:layout_height="41dp"
+                    android:layout_marginLeft="17dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+               <ImageView
+                   android:id="@+id/iv_guideline_1"
+                   android:src="@mipmap/guide_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_oryoucan"
+                    android:src="@mipmap/guide_font_or_you_can"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_guideline_2"
+                    android:src="@mipmap/guide_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ib_guide_qq"
+                    android:src="@mipmap/guide_qq"
+                    android:background="#00000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ib_guide_verticalline"
+                    android:src="@mipmap/guide_verticalline"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:id="@+id/ib_guide_weixin"
+                    android:src="@mipmap/guide_weixin"
+                    android:background="#00000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

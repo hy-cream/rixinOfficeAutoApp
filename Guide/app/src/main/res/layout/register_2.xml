@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+
+        android:background="@mipmap/guide_bg_img1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+
+        android:background="@mipmap/guide_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/register_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@mipmap/register_slider_line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@mipmap/register_slider_highlighted"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@mipmap/register_slider_line"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@mipmap/register_slider"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:text="验证码已发送至您的手机"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="43dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@mipmap/register_input2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <EditText
+                android:id="@+id/et_checknumber"
+                android:hint="请输入验证码"
+                android:layout_width="150dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:background="@null"
+                android:textColorHint="#D4CFD0"
+                android:layout_gravity="left|center_vertical" />
+
+            <TextView
+                android:id="@+id/tv_timedown"
+                android:text="59s"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="right|center_vertical" />
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/bt_check_next"
+            android:text="下一步"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/register_btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="点击“下一步”即同意 《XXX协议》"
+            android:textColor="#ffffff"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_marginTop="220dp"
+            android:src="@mipmap/register_bottom_line"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="已有账号了？"
+                android:textColor="#D4CFD0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/bt_check_login"
+                android:text="登录"
+                android:background="#00000000"
+                android:textColor="#ffffff"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
